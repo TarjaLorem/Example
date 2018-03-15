@@ -1,0 +1,121 @@
+@keyframes getbigger {
+    from {
+        width: 50px;
+    }
+    
+    to {
+        width: 200px;
+    }
+}
+
+
+    @-webkit-keyframes getbigger {
+      from {
+        width: 50px;
+    }
+    
+    to {
+        width: 200px;
+    }
+}
+
+ #nope {
+        animation-name: getbigger;
+        animation-duration: 5s;
+        -webkit-animation-name: getbigger;
+        -webkit- animation-duration: 5s;
+    }
+
+#count:hover {
+    font-size: 150px;
+    transition: font-size 1s linear;
+}
+
+/*
+essential styles:
+these make the slideshow work
+*/
+#slides{
+	position: relative;
+	height: 500px;
+    width: 650px;
+	margin: 0 auto;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 2s;
+}
+
+.showing{
+	opacity: 2;
+	z-index: 2;
+}
+
+
+/*ACCORDION for examp3*/
+
+.accordion-title.active + .accordion-count {
+    display: block;
+}
+.accordion-count {
+    display: none;
+}
+
+/*EVENTS for examp4*/
+
+#box {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+
+.day {
+    color: black;
+    background-color: white;
+}
+
+.night {
+    color: white;
+    background-color: black; 
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+
+
+.slide{
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+	background: #333;
+	color: #fff;
+}
+
+.slide:nth-of-type(1){
+	background: red;
+}
+.slide:nth-of-type(2){
+	background: orange;
+}
+.slide:nth-of-type(3){
+	background: green;
+}
+.slide:nth-of-type(4){
+	background: blue;
+}
+.slide:nth-of-type(5){
+	background: purple;
+}
+*/
